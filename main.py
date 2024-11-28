@@ -29,5 +29,5 @@ async def read_item(query: str):
 
 if __name__ == '__main__':
     server_ip = '0.0.0.0'
-    server_port = 8900
+    server_port = 13401
     uvicorn.run(app, host=server_ip, port=server_port)

@@ -10,7 +10,7 @@ def daily_func():
         search_res = duck_search(query=query)
         save_search_res(query=query, data=search_res)
 
-schedule.every().day.at('12:08').do(daily_func)
+schedule.every().day.at('01:00').do(daily_func)
 
 while True:
     schedule.run_pending()  # 检查并运行已安排的任务

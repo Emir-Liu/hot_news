@@ -38,8 +38,8 @@ def save_search_res(query:str, data:List[dict]):
 
 
 if __name__ == '__main__':
-    # query = '纺织'
-    query = 'AI科技'
+    query = '纺织'
+    # query = 'AI科技'
     search_res = duck_search(query=query)
     save_search_res(query=query, data=search_res)
 
