@@ -3,7 +3,7 @@ import json
 
 from fastapi import FastAPI
 import uvicorn
-
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
@@ -25,7 +25,13 @@ async def read_item(query: str):
         save_search_res(query=query, data=search_res)
         return search_res
 
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 if __name__ == '__main__':
     server_ip = '0.0.0.0'
