@@ -9,7 +9,7 @@ def duck_search(query:str) -> List[dict]:
     search_res_list = []
     print(f'开始搜索')
     try:
-        ddgs_generator = DDGS().news(keywords=query, max_results=5)
+        ddgs_generator = DDGS().news(keywords=query, max_results=10)
         for ans_id, tmp_ans in enumerate(ddgs_generator):
             print(f'{tmp_ans}')
             # add http prefix
